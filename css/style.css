@@ -18,7 +18,7 @@ h2 {
 	color: #333;
 }
 h3 {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
 	color: #333;
 }
@@ -571,6 +571,10 @@ color: #777;
 }
 #footer a:hover {
 	border-bottom: 2px solid #608dfd;
+}
+
+#CT img:hover {
+background-image: url('./nivo-lightbox/CT.png');
 }
 
 @media (max-width: 768px) {
