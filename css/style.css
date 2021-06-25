@@ -420,23 +420,18 @@ header .intro-text {
 #team h4 {
 	margin: 5px 0;
 }
-#team .CT {
-	width: 240px;
+
+#team .team-img {
+border-radius: 30px;
+background: #cac9c9;
+box-shadow:  -21px 21px 19px #939393,
+             21px -21px 19px #ffffff;
 }
-.CT:hover{
-	background-image: url('./nivo-lightbox/CT.png');
-}
-/* #team .team-img:hover .CT {
-	display: inline;
-} */
-/* #team .CT {
-	display: none;
-	position: absolute;
-	z-index: 99;
-} */
+
 #team .thumbnail {
 	background: transparent;
 	border: 0;
+	
 }
 #team .thumbnail .caption {
 	padding: 10px 0 0 0;
