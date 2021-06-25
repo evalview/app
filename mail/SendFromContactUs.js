@@ -4,15 +4,16 @@ form.addEventListener("submit", async (event) => {
 
   const { name, email, message } = event.target;
 
-	// Use your API endpoint URL you copied from the previous step
+  // Use your API endpoint URL you copied from the previous step
   const endpoint =
     "https://67ec9izp8i.execute-api.us-east-2.amazonaws.com/default/sendContactEmail";
   // We use JSON.stringify here so the data can be sent as a string via HTTP
-	const body = JSON.stringify({
+  const body = JSON.stringify({
     senderName: name.value,
     senderEmail: email.value,
     message: message.value
   });
+  console.log("body", body);
   const requestOptions = {
     method: "POST",
     body
