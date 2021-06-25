@@ -422,17 +422,40 @@ header .intro-text {
 }
 
 #team .team-img {
+opacity: 1;
 border-radius: 30px;
 background: #cac9c9;
 box-shadow:  -21px 21px 19px #939393,
              21px -21px 19px #ffffff;
+transition: .5s ease;
+backface-visibility: hidden;
 }
 
 #team .thumbnail {
 	background: transparent;
-	border: 0;
-	
+	border: 0;	
 }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.thumbnail:hover .image {
+  opacity: 0.8;
+}
+
+.thumbnail:hover .middle {
+  opacity: 1;
+	transform: scale(2);
+}
+
 #team .thumbnail .caption {
 	padding: 10px 0 0 0;
 	color: #888;
