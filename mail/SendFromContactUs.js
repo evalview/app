@@ -25,7 +25,7 @@ form.addEventListener("submit", async (event) => {
     })
     .then((response) => {
       document.getElementById("result-text").innerText =
-        "Email sent successfully!";
+        "Thanks for contacting Eval-view! YOur email has been successfully sent";
     })
     .catch((error) => {
       document.getElementById("result-text").innerText =
