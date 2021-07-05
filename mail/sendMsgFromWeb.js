@@ -13,10 +13,10 @@ form.addEventListener("submit", async (e) => {
 
   await Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "inchapter@gmail.com",
-    Password: "D2BD2A64384C4AAA9D02377C4B18015ABB20",
-    To: 'chuong.tang@aol.com',
-    From: "inchapter@gmail.com",
+    Username: "tdog.evolveu@gmail.com",
+    Password: "3B0B6C90CFA4E796D33BB116BC51B53D3993",
+    To: 'tdog.evolveu@gmail.com',
+    From: "tdog.evolveu@gmail.com",
     Subject: "Message from Eval-view site",
     Body: msgBody,
   })
