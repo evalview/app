@@ -1,10 +1,10 @@
-let form = document.querySelector("form");
+const form = document.querySelector("form");
+
 
 const resetFormAfterSend = () => {
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
   document.getElementById('message').value = '';
-  console.log('form is reset', form);
 }
 
 form.addEventListener("submit", async (e) => {
