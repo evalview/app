@@ -1,4 +1,11 @@
-const form = document.querySelector("form");
+let form = document.querySelector("form");
+
+const resetFormAfterSend = () => {
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+  console.log('form is reset', form);
+}
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -10,6 +17,7 @@ form.addEventListener("submit", async (e) => {
     senderEmail: email.value,
     message: message.value
   });
+  console.log(msgBody);
 
   await Email.send({
     Host: "smtp.elasticemail.com",
@@ -21,6 +29,8 @@ form.addEventListener("submit", async (e) => {
     Body: msgBody,
   })
     .then(() => {
-      alert("Thanks for contacting us. Your message has been successfully sent🚀")
+      alert("Thanks for contacting us. Your message has been successfully sent🚀");
+      resetFormAfterSend();
+
     });
 })
