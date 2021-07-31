@@ -524,17 +524,20 @@
             <h2>Get In Touch</h2>
             <p>Please fill out the form below to send us an email and we will get back to you as soon as possible.</p>
           </div>
-          <form name="sentMessage" id="contactForm" validate>
+          <form action="https://formsubmit.co/7d34ed1319aa08524c78f4e8f429fe05" method="POST" name="sentMessage" id="contactForm" validate>
             <div class="row">
+            
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                  <input type="hidden" name="_subject" value="New message from landing page">
+                  <input type="hidden" name="_autoresponse" value="Thank you for contacing Eval-view">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                  <input type="email" name="email"  class="form-control" placeholder="Email" required>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -549,6 +552,8 @@
             <div>
               <p id="result-text"></p>
             </div>
+
+            <!-- <input type="hidden" name="_next"  value="Thank you for sending this message"> -->
           </form>
         </div>
       </div>
