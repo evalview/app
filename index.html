@@ -35,8 +35,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-      window.onload =function toggleBtn() {
-      alert("something here");
+      function toggleBtn() {
+      console.log("before fetching app");
+      fetch('https://evalview.herokuapp.com/');
+      console.log("AFTER fetching app");
       };
     </script>
 </head>
