@@ -2703,7 +2703,7 @@ input[type="search"] {
   .input-group-sm input[type="date"],
   .input-group-sm input[type="time"],
   .input-group-sm input[type="datetime-local"],
-  .input-group-sm input[type="month"] {
+  .input-group-sm inputmonth"] {
     line-height: 30px;
   }
   input[type="date"].input-lg,
@@ -2737,7 +2737,7 @@ input[type="search"] {
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
+.checkbox inputcheckbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-top: 4px \9;
