@@ -1,59 +1,59 @@
 
-function main() {
+// function main() {
 
-(function () {
-   'use strict';
+// (function () {
+//    'use strict';
    
-  	$('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 50
-            }, 900);
-            return false;
-          }
-        }
-      });
+//   	$('a.page-scroll').click(function() {
+//         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+//           var target = $(this.hash);
+//           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//           if (target.length) {
+//             $('html,body').animate({
+//               scrollTop: target.offset().top - 50
+//             }, 900);
+//             return false;
+//           }
+//         }
+//       });
 
 
-    $('body').scrollspy({ 
-        target: '.navbar-default',
-        offset: 80
-    });
+//     $('body').scrollspy({ 
+//         target: '.navbar-default',
+//         offset: 80
+//     });
 
-	// Hide nav on click
-  $(".navbar-nav li a").click(function (event) {
-    // check if window is small enough so dropdown is created
-    var toggle = $(".navbar-toggle").is(":visible");
-    if (toggle) {
-      $(".navbar-collapse").collapse('hide');
-    }
-  });
+// 	// Hide nav on click
+//   $(".navbar-nav li a").click(function (event) {
+//     // check if window is small enough so dropdown is created
+//     var toggle = $(".navbar-toggle").is(":visible");
+//     if (toggle) {
+//       $(".navbar-collapse").collapse('hide');
+//     }
+//   });
 
-  $(document).on("click", ".js-videoPoster", function (e) {
-    e.preventDefault();
-    var poster = $(this);
-    var wrapper = poster.closest(".js-videoWrapper");
-    videoPlay(wrapper);
-  });
+//   $(document).on("click", ".js-videoPoster", function (e) {
+//     e.preventDefault();
+//     var poster = $(this);
+//     var wrapper = poster.closest(".js-videoWrapper");
+//     videoPlay(wrapper);
+//   });
 
-  function videoPlay(wrapper) {
-    var iframe = wrapper.find(".js-videoIframe");
-    var src = iframe.data("src");
-    wrapper.addClass("videoWrapperActive");
-    iframe.attr("src", src);
-  };
+//   function videoPlay(wrapper) {
+//     var iframe = wrapper.find(".js-videoIframe");
+//     var src = iframe.data("src");
+//     wrapper.addClass("videoWrapperActive");
+//     iframe.attr("src", src);
+//   };
 	
-    // Nivo Lightbox 
-    $('.portfolio-item a').nivoLightbox({
-            effect: 'slideDown',  
-            keyboardNav: true,                            
-        });
+//     // Nivo Lightbox 
+//     $('.portfolio-item a').nivoLightbox({
+//             effect: 'slideDown',  
+//             keyboardNav: true,                            
+//         });
 		
-}());
+// }());
 
 
-}
-main();
+// }
+// main();

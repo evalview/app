@@ -18,7 +18,9 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <!-- <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Stylesheet
     ================================================== -->
@@ -29,49 +31,52 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-      function toggleBtn() {
-      console.log("before fetching app");
+  <script>
+    function toggleBtn() {
       fetch('https://evalview.herokuapp.com/');
-      console.log("AFTER fetching app");
-      };
-    </script>
+      setTimeout(() => {
+        appBtn.classList.remove("clearView");
+        appBtn.classList.add("btn", "btn-custom");
+      }, 10000);
+    };
+  </script>
 </head>
 
-<body onload="toggleBtn" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body onload="toggleBtn"  data-spy="scroll" data-target=".navbar-fixed-top">
   <!-- Navigation
     ==========================================-->
   <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <!-- Background animtion-->
+    <div class="background">
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+     <div class="cube"></div>
+   </div>
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+      <div class="navbar-header" >
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only"></span> <span
-            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            
-            <span><img  id="logo" src="./img/eval_view_logo_2.jpg"  onload="toggleBtn()" alt="logo" /></span><a class="navbar-brand page-scroll" href="#page-top"> Eval-View</a>
+          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+        <span><img id="logo" src="./img/eval_view_logo_2.jpg" onload="toggleBtn()" alt="logo" /></span>
+        <a class="navbar-brand page-scroll" href="#homeSec"> Eval-View</a>
       </div>
-      
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#features" class="page-scroll">Features</a></li>
-          <li><a href="#about" class="page-scroll">About</a></li>
-          <li><a href="#services" class="page-scroll">Services</a></li>
-          <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-          <li><a href="#testimonials" class="page-scroll">Testimonials</a></li>
-          <li><a href="#team" class="page-scroll">Team</a></li>
-          <li><a href="#contact" class="page-scroll">Contact</a></li>
-          <li><input type="button"  class="btn btn-custom" onClick="document.location='https://evalview.herokuapp.com/'"
-              value='USE THE APP'></li>
-          <!-- <li><input type="button"  display="none" id="appBtn" class="btn btn-custom" onClick="document.location='https://evalview.herokuapp.com/'"
-              value='USE THE APP'></li> -->
+          <li><a href="#features" >Features</a></li>
+          <li><a href="#about" >About</a></li>
+          <li><a href="#services" >Services</a></li>
+          <!-- <li><a href="#gallery" >Gallery</a></li> -->
+          <li><a href="#testimonials" >Testimonials</a></li>
+          <li><a href="#team" >Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><input type="button" id="appBtn" class="clearView"
+              onClick="document.location='https://evalview.herokuapp.com/'" value='USE THE APP'></li>
         </ul>
       </div>
 
@@ -84,9 +89,17 @@
       <div class="overlay">
         <div class="container">
           <div class="row">
-            <div class="col-md-18 col-md-offset-2 intro-text">
-              <iframe height='20' style= 'visibility:hidden' loading="eager" src="https://evalview.herokuapp.com/" title="EvalviewApp on heroku"></iframe>
-              <h1>Eval-View</h1>
+
+            <div id="homeSec" class="col-md-18 col-md-offset-2 intro-text">
+              
+              <h1 class="blur-out-expand" >Eval-View</h1>
+              <iframe height='20' style='visibility:hidden' loading="eager" src="https://evalview.herokuapp.com/"
+                title="EvalviewApp on heroku"></iframe>
+              <h4 class="slide-in-right">Recruitment and Interview processes have changed, but with change, often comes numerous challenges.
+              </h4>
+              <h4 class="focus-in-expand" >The introduction of live video interviews, one-way video screening and other HR solutions have created
+                a pandora’s box of new challenges and struggles for candidates
+              </h4>
               <br>
               <a href="#features" class="btn btn-custom btn-lg page-scroll">Learn More</a>
             </div>
@@ -136,16 +149,16 @@
 
     </div>
   </div>
-  </div>
+  
   <!-- About Section -->
   <div id="about">
     <div class="container">
       <div class="row">
-      
+
         <div class="col-xs-12 col-md-6"> <iframe
-        src="https://www.youtube.com/embed/T6i6EmP5g7k?autoplay=1&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
-        width="500" height="500" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe> </div>
+            src="https://www.youtube.com/embed/T6i6EmP5g7k?autoplay=0&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
+            width="500" height="500" allowfullscreen="true"
+            style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe> </div>
         <div class="col-xs-12 col-md-6">
           <div class="about-text">
             <br>
@@ -155,7 +168,7 @@
               We have learned that no one person can be a master of all and that a community can share, teach and learn
               from each other. Out goal is to create a community of vast experience to share their learnings to help
               everyone present their best in the interview process.</p>
-              <br>
+            <br>
             <h3>Why Choose Us?</h3>
             <br>
             <div class="list-style">
@@ -186,23 +199,22 @@
     <div class="container">
       <div class="section-title">
         <h2>Our Services</h2>
-        <br>
-        <p>We are a community of continuous learners. Our services are about sharing.</p>
       </div>
       <div class="row">
         <div class="col-md-4"> <i class="fa fa-laptop"></i>
           <div class="service-desc">
-            <br>
+        
             <h3>Watch and Learn</h3>
             <p>Join and create a profile. Search skills and questions that you need to present. Watch and learn in a
               safe environment from others who are sharing their challenges and others that have mastered their
               presentations.</p>
           </div>
         </div>
+        
         <div class="col-md-4"> <i class="fa fa-tasks"></i>
-       
+
           <div class="service-desc">
-            <br>
+       
             <h3>Rate and Review</h3>
             <p>You can't manage what you measure and our peer review environment provides a trusted measurement of your
               interview performance. Share and be reviewed by peers, seasoned professional, and HR recruiters. Get the
@@ -210,14 +222,32 @@
           </div>
         </div>
         <div class="col-md-4"> <i class="fa fa-sitemap"></i>
-        
+
           <div class="service-desc">
-            <br>
+    
             <h3>Create and Present</h3>
             <p>Create your own profile, interviews and portfolio of skills. Refine and present your best interviews.
               Network with your for peer reviews and submit to our database of recruiters. We want to help you present
               the best you so you can download the job of your future.</p>
           </div>
+        </div>
+        <div class="container">
+         
+          <iframe
+            src="https://www.youtube.com/embed/srw4r3htm4U?autoplay=0&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
+            width="300" height="250" allowfullscreen="true"
+            style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem; margin: 0 2rem"></iframe>
+      
+          <iframe
+            src="https://www.youtube.com/embed/syfPzQWwbTk?autoplay=0&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
+            width="300" height="250" allowfullscreen="true"
+            style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem; margin: 0 2rem"></iframe>
+         
+          <iframe
+            src="https://www.youtube.com/embed/nVSWmhJruHc?autoplay=0&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
+            width="300" height="250" allowfullscreen="true"
+            style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem; margin: 0 2rem"></iframe>
+         
         </div>
       </div>
       <!-- <div class="row">
@@ -245,154 +275,7 @@
       </div> -->
     </div>
   </div>
-  <!-- Gallery Section -->
-  <div id="portfolio" class="text-center">
-    <div class="container">
-      <!-- <div class="section-title"> -->
-      <h2>Video Tips for Interviews</h2>
-      <p>Here is a short collection of leading HR consultants and advisors with suggestions for preparing for a video interview. Remember you will need to research, have notes and practice how to make eye-contact through a screen.
-        <p>
-          <!-- </div> -->
-    </div>
-  </div>
-  <!-- <div class="well well-lg text-center"> -->
-  </div>
-  <div class="container">
-    <div class="col-lg-4">
-      <iframe
-        src="https://www.youtube.com/embed/srw4r3htm4U?autoplay=1&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
-        width="350" height="300" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe>
-    </div>
-
-    <div class="col-lg-4">
-      <iframe
-        src="https://www.youtube.com/embed/syfPzQWwbTk?autoplay=1&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
-        width="350" height="300" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe>
-    </div>
-
-    <div class="col-lg-4">
-      <iframe
-        src="https://www.youtube.com/embed/nVSWmhJruHc?autoplay=1&modestbranding=1&rel=0&hl=en&showinfo=0&color=white"
-        width="350" height="300" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe>
-    </div>
-    <!-- <div class="col-lg-4">
-      <iframe
-        src="https://www.youtube.com/watch?v=srw4r3htm4U"
-        width="350" height="300" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe>
-    </div> -->
-
-    <!-- <div class="col-lg-4">
-      <iframe
-        src="https://www.youtube.com/embed/G4cJ4wviwS8?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"
-        width="350" height="300" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe>
-    </div> -->
-
-    <!-- <div class="col-lg-4">
-      <iframe
-        src="https://www.youtube.com/embed/G4cJ4wviwS8?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"
-        width="350" height="300" allowfullscreen="true"
-        style="border:0.5rem solid rgb(122, 155, 226); border-radius: 1.5rem"></iframe>;
-    </div> -->
-  </div>
-  </div>
-  <!-- <div id="portfolio" class="text-center">
-  <div class="container">
-    <div class="section-title">
-      <h2>Gallery</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+ 
   <!-- Testimonials Section -->
   <div id="testimonials">
     <div class="container">
@@ -404,8 +287,11 @@
           <div class="testimonial">
             <div class="testimonial-image"> <img src="img/testimonials/01.jpg" alt=""> </div>
             <div class="testimonial-content">
-              <p>"I have not interviewed for a job in over 20 years.  It is great to have a chance to practice, see what the main topics of questioning are and to get feedback from others on how I am doing.  This is a very intimidating process in the new online world and I find the practice is helping me present myself in the best light."</p>
-                <br>
+              <p>"I have not interviewed for a job in over 20 years. It is great to have a chance to practice, see what
+                the main topics of questioning are and to get feedback from others on how I am doing. This is a very
+                intimidating process in the new online world and I find the practice is helping me present myself in the
+                best light."</p>
+              <br>
               <div class="testimonial-meta"> - Greg Johnson </div>
             </div>
           </div>
@@ -414,8 +300,10 @@
           <div class="testimonial">
             <div class="testimonial-image"> <img src="img/testimonials/02.jpg" alt=""> </div>
             <div class="testimonial-content">
-              <p>"I am a developer.  I have the skills and ability to create great products but the ad-hoc presentation and answer process of online interviews is uncomfortable.  I appreciate the ability to see myself or how I look on the other end of the interview process and try to show my skills."</p>
-                <br>
+              <p>"I am a developer. I have the skills and ability to create great products but the ad-hoc presentation
+                and answer process of online interviews is uncomfortable. I appreciate the ability to see myself or how
+                I look on the other end of the interview process and try to show my skills."</p>
+              <br>
               <div class="testimonial-meta"> - Aiden Walsh </div>
             </div>
           </div>
@@ -424,8 +312,11 @@
           <div class="testimonial">
             <div class="testimonial-image"> <img src="img/testimonials/03.jpg" alt=""> </div>
             <div class="testimonial-content">
-              <p>"Coming out of school I have not been exposed to the types of questions and methods to answer interviewers questions.  I have learned so much from peer review and comments and watching others answer similar questions.  I know have a list of situations, tasks, actions and results to share.  I am so much more prepared and comfortable either recording or being online for an interview now!"</p>
-                <br>
+              <p>"Coming out of school I have not been exposed to the types of questions and methods to answer
+                interviewers questions. I have learned so much from peer review and comments and watching others answer
+                similar questions. I know have a list of situations, tasks, actions and results to share. I am so much
+                more prepared and comfortable either recording or being online for an interview now!"</p>
+              <br>
               <div class="testimonial-meta"> - Toby Fisher </div>
             </div>
           </div>
@@ -473,7 +364,8 @@
     <div class="container">
       <div class="col-md-14 col-md-offset-2 section-title">
         <h2>Meet the Team</h2>
-        <p>The only way to create great things every day is to be with great people who truly enjoy their job. We did it here! Meet the team that want to make sure you met your best future team too.</p>
+        <p>The only way to create great things every day is to be with great people who truly enjoy their job. We did it
+          here! Meet the team that want to make sure you met your best future team too.</p>
       </div>
       <br>
       <div id="row">
@@ -534,19 +426,23 @@
             <h2>Get In Touch</h2>
             <p>Please fill out the form below to send us an email and we will get back to you as soon as possible.</p>
           </div>
-          <form action="https://formsubmit.co/7d34ed1319aa08524c78f4e8f429fe05" method="POST" name="sentMessage" id="contactForm" validate>
+          <form action="https://formsubmit.co/7d34ed1319aa08524c78f4e8f429fe05" method="POST" name="sentMessage"
+            id="contactForm" validate>
             <div class="row">
-            <div class="col-md-6">
+              <div class="col-md-6">
                 <div class="form-group">
                   <input type="hidden" name="_subject" value="New message from Eval-view landing page">
-                  <input type="hidden" name="_autoresponse" value="Thank you for contacting Eval-view. We will reply to this email as soon as we can.">
-                  <input type="text" style="margin-left:-15px" name="name" id="name" class="form-control" placeholder="Name" required>
+                  <input type="hidden" name="_autoresponse"
+                    value="Thank you for contacting Eval-view. We will reply to this email as soon as we can.">
+                  <input type="text" style="margin-left:-15px" name="name" id="name" class="form-control"
+                    placeholder="Name" required>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="email" name="email" style="padding-right:1px" class="form-control" placeholder="Email" required>
+                  <input type="email" name="email" style="padding-right:1px" class="form-control" placeholder="Email"
+                    required>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -562,7 +458,7 @@
               <p id="result-text"></p>
             </div>
 
-            <input type="hidden" name="_next"  value="Thank you for sending this message">
+            <input type="hidden" name="_next" value="Thank you for sending this message">
           </form>
         </div>
       </div>
@@ -573,31 +469,22 @@
             Calgary, Alberta</p>
         </div>
         <div class="contact-item">
-          
+
           <p><span><i class="fab fa-discord"></i> Discord </span> https://discord.gg/Rb9WRfPaKa</p>
         </div>
         <div class="contact-item">
           <p><span><i class="fas fa-envelope"></i> Email</span> admin@evalview.club</p>
         </div>
       </div>
-      <!-- <div class="col-md-12">
-        <div class="row">
-          <div class="social">
-            <ul>
-              <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
+     
     </div>
   </div>
   <!-- Footer Section -->
   <div id="footer">
     <div class="container text-center">
-      <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fevalview.github.io%2Fapp%2F"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fevalview.github.io%2Fapp%2F&labelColor=%23d9e3f0&countColor=%23263759" /></a>
+      <img src="./img/SSL.png" alt="SSL" />
+      <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fevalview.github.io%2Fapp%2F"><img
+          src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fevalview.github.io%2Fapp%2F&labelColor=%23d9e3f0&countColor=%23263759" /></a>
       <p>&copy; 2021 TDOG.IO</p>
     </div>
   </div>
@@ -606,14 +493,7 @@
   <script type="text/javascript" src="js/SmoothScroll.js"></script>
   <script type="text/javascript" src="js/nivo-lightbox.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript"> //<![CDATA[
-    var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
-    document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-  //]]></script>
-  <script language="JavaScript" type="text/javascript">
-    TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_sm_124x32.png", "POSDV", "none");
-  </script>
+  <!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
 
 </html>
