@@ -187,8 +187,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url(../img/mainBG2.png) center center no-repeat;
-	background-color: #e5e5e5;
+	background: url(../img/MainBG2.png) center center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
