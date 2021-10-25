@@ -242,6 +242,11 @@ header .intro-text {
 /* About Section */
 #about {
 	padding: 100px 0;
+	background-image: radial-gradient(circle farthest-corner at 0.8% 3.1%, rgba(255,188,224,1) 0%, rgba(170,165,255,1) 46%, rgba(200,216,207,1) 100%);
+	background-size: auto;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	background-color: rgba(0,0,0,0);
 }
 #about h3 {
 	font-size: 22px;
