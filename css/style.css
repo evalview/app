@@ -799,3 +799,6 @@ background-image: url('./nivo-lightbox/CT.png');
     opacity: 0;
   }
 }
+.aniLogo{
+	max-height: 2.5rem;
+}
